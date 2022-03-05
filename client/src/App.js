@@ -13,8 +13,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/login' component={Login} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/login' element={<Login />} />
       </Routes>
     </Router>
   );

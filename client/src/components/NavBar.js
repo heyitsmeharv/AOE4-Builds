@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Anchor, Container } from '@mantine/core';
+import { globalStyle } from '../styles/GlobalStyle';
+
+import { Button } from '@mantine/core';
 
 function NavBar() {
+  const { classes, cx } = globalStyle();
+  const [active, setActive] = useState(0);
   return (
-    <Container>
-      <Anchor
+    <div className={classes.navbar}>
+      <Button
+        className={cx(classes.button, { [classes.active]: active === 0 })}
+        onClick={() => setActive(0)}
         component={Link}
         to="/"
-        size="lg"
-        style={{ margin: 20 }}
       >
         Home
-      </Anchor>
-      <Anchor
+      </Button>
+      <Button
+        className={cx(classes.button, { [classes.active]: active === 1 })}
+        onClick={() => setActive(1)}
         component={Link}
         to="/login"
-        size="lg"
-        style={{ margin: 20 }}
+        sx={{
+          marginLeft: 'auto',
+        }}
       >
         Login/Register
-      </Anchor>
-    </Container>
+      </Button>
+    </div>
   )
 }
 
