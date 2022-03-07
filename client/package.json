@@ -10,6 +10,7 @@
     "@mantine/modals": "^3.6.12",
     "@mantine/notifications": "^3.6.12",
     "@mantine/rte": "^3.6.12",
+    "@radix-ui/react-icons": "^1.1.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",

@@ -57,6 +57,7 @@ export const globalStyle = createStyles((theme, _params, _) => {
     active: {
       backgroundColor: '#ffdf91',
       color: '#003366',
+      borderBottom: '2px solid white',
     },
   };
 });
