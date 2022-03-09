@@ -45,6 +45,14 @@ function NavBar() {
       </Button>
       <Button
         className={cx(classes.button, { [classes.active]: active === 1 })}
+        onClick={() => setActive(1)}
+        component={Link}
+        to="/"
+      >
+        Builds
+      </Button>
+      <Button
+        className={cx(classes.button, { [classes.active]: active === 2 })}
         onClick={logout}
         component={Link}
         to="/login"
