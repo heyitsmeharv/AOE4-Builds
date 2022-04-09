@@ -77,24 +77,30 @@ function Login() {
   return (
     <Container className={classes.container}>
       <Box className={classes.flex}>
-        <div style={{ width: '50%', position: 'relative' }}>
+        <Box sx={{ width: '50%', position: 'relative' }}>
           <LoadingOverlay visible={registerLoading || loginLoading} />
           <Card
             shadow="md"
             padding="xl"
           >
             <Card.Section>
-              <Tabs grow>
-                <Tab label="Login">
-                  <Box style={{ margin: '12px 24px' }}>
+              <Tabs
+                grow
+              >
+                <Tab
+                  label="Login"
+                  sx={{ minHeight: '50px' }}
+                >
+                  <Box sx={{ margin: '12px 24px' }}>
                     <InputWrapper
                       id="username-input"
                       required
                       label="Username"
+                      sx={{ lineHeight: '2.5' }}
                     >
                       <TextInput
                         name="username"
-                        style={{ marginBottom: '12px' }}
+                        sx={{ marginBottom: '12px' }}
                         icon={<PersonIcon />}
                         placeholder="Username"
                         value={values.username}
@@ -106,31 +112,36 @@ function Login() {
                       id="password-input"
                       required
                       label="Password"
+                      sx={{ lineHeight: '2.5' }}
                     >
                       <PasswordInput
                         name="password"
-                        style={{ flex: 1 }} value={values.password}
+                        sx={{ flex: 1 }} value={values.password}
                         icon={<LockClosedIcon />}
                         placeholder="Password"
                         onChange={onChange}
                         error={loginErrors?.password ? loginErrors.password : false}
                       />
                     </InputWrapper>
-                    <Button onClick={onSubmitLogin} type="submit" fullWidth variant="light" color="blue" style={{ marginTop: '8%' }}>
+                    <Button onClick={onSubmitLogin} type="submit" fullWidth variant="light" color="blue" sx={{ marginTop: '8%' }}>
                       Login
                     </Button>
                   </Box>
                 </Tab>
-                <Tab label="Register">
-                  <Box style={{ margin: '12px 24px' }}>
+                <Tab
+                  label="Register"
+                  sx={{ minHeight: '50px' }}
+                >
+                  <Box sx={{ margin: '12px 24px' }}>
                     <InputWrapper
                       id="username-input"
                       required
                       label="Username"
+                      sx={{ lineHeight: '2.5' }}
                     >
                       <TextInput
                         name="username"
-                        style={{ marginBottom: '12px' }}
+                        sx={{ marginBottom: '12px' }}
                         icon={<PersonIcon />}
                         placeholder="Username"
                         value={values.username}
@@ -142,10 +153,11 @@ function Login() {
                       id="email-input"
                       required
                       label="Email"
+                      sx={{ lineHeight: '2.5' }}
                     >
                       <TextInput
                         name="email"
-                        style={{ marginBottom: '12px' }}
+                        sx={{ marginBottom: '12px' }}
                         icon={<EnvelopeClosedIcon />}
                         placeholder="Your email"
                         value={values.email}
@@ -153,16 +165,16 @@ function Login() {
                         error={registerErrors?.email ? registerErrors.email : false}
                       />
                     </InputWrapper>
-                    <Box style={{ display: 'flex', marginBottom: '12px', width: '100%' }}>
+                    <Box sx={{ display: 'flex', marginBottom: '12px', width: '100%' }}>
                       <InputWrapper
-                        style={{ width: '100%' }}
+                        sx={{ width: '100%', lineHeight: '2.5' }}
                         id="password-input"
                         required
                         label="Password"
                       >
                         <PasswordInput
                           name="password"
-                          style={{ flex: 1, marginRight: '12px' }} value={values.password}
+                          sx={{ flex: 1, marginRight: '12px' }} value={values.password}
                           icon={<LockClosedIcon />}
                           placeholder="Password"
                           onChange={onChange}
@@ -170,14 +182,14 @@ function Login() {
                         />
                       </InputWrapper>
                       <InputWrapper
-                        style={{ width: '100%' }}
+                        sx={{ width: '100%', lineHeight: '2.5' }}
                         id="confirm-password-input"
                         required
                         label="Confirm Password"
                       >
                         <PasswordInput
                           name="confirmPassword"
-                          style={{ flex: 1 }} value={values.confirmPassword}
+                          sx={{ flex: 1 }} value={values.confirmPassword}
                           icon={<LockClosedIcon />}
                           placeholder="Confirm Password"
                           onChange={onChange}
@@ -185,7 +197,7 @@ function Login() {
                         />
                       </InputWrapper>
                     </Box>
-                    <Button onClick={onSubmitRegister} type="submit" fullWidth variant="light" color="blue" style={{ marginTop: 14 }}>
+                    <Button onClick={onSubmitRegister} type="submit" fullWidth variant="light" color="blue" sx={{ marginTop: 14 }}>
                       Register
                     </Button>
                   </Box>
@@ -193,7 +205,7 @@ function Login() {
               </Tabs>
             </Card.Section>
           </Card>
-        </div>
+        </Box>
       </Box>
     </Container >
   );

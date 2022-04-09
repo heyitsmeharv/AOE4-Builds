@@ -5,7 +5,7 @@ export const globalStyle = createStyles((theme, _params, _) => {
     container: {
       backgroundColor: '#EFEFEF',
       maxWidth: '100%',
-      height: 'calc(100vh - 122px)',
+      height: 'calc(100vh - 144px)',
       padding: '24px'
     },
     flex: {
@@ -22,7 +22,7 @@ export const globalStyle = createStyles((theme, _params, _) => {
       alignItems: 'center',
       borderTop: '2px solid #ffdf91',
       borderBottom: '2px solid #ffdf91',
-      padding: '0 2%'
+      padding: '10px 2%'
     },
     button: {
       color: 'white',

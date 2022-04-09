@@ -6,9 +6,9 @@ import { AuthProvider } from './context/auth';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
-import './App.css';
-
 import NavBar from './components/NavBar';
+
+import './App.css';
 
 function App() {
   return (
